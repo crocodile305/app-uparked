@@ -1,0 +1,3 @@
+rootProject.name = 'uparked'
+
+include ':app'
