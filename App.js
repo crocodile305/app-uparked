@@ -9,7 +9,7 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
 
-// import LoginCarousel from "./src/pages/LoginCarousel";
+import LoginCarousel from "./src/pages/LoginCarousel";
 import LoginScreen from "./src/pages/LoginScreen";
 import Menu from "./src/pages/Menu";
 import Configuration from "./src/pages/Configuration";
@@ -24,9 +24,16 @@ export default class App extends Component<Props> {
     return (
         <Router>
             <Stack key="root" hideNavBar={true}>
-                <Scene key="login"  component={Register} initial hideNavBar={true} title="Login"/>
+                <Scene key="login"  component={LoginScreen} initial hideNavBar={true} title="Login"/>
+                <Scene key="register"  component={Register}  hideNavBar={true} title="Register"/>
+                <Scene key="resetPassword"  component={ResetPassword}  hideNavBar={true} title="ResetPassword"/>
+                <Scene key="phoneVerify"  component={PhoneVerify}  hideNavBar={true} title="PhoneVerify"/>
+                <Scene key="menu"  component={Menu}  hideNavBar={true} title="menu"/>
+                <Scene key="configuration"  component={Configuration}  hideNavBar={true} title="Configuration"/>
+
             </Stack>
         </Router>
+
     );
   }
 }

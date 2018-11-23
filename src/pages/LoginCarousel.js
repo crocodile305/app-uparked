@@ -10,6 +10,7 @@ export class LoginCarousel extends Component{
     render(){
         return(
             <View style = {styles.parentview}>
+                <Text>TTTTTTTTTTTTTTTTTTTTTTTTTTT</Text>
                 <Carousel pageStyle={styles.maincontainer}>
                     <View style = {styles.itemView}>
 

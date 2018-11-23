@@ -2,11 +2,20 @@ import React ,{Component} from 'react';
 import {Dimensions,TouchableOpacity ,StyleSheet,Image, TextInput,Text, View,Button} from 'react-native';
 
 
-
+import { Scene, Router, Actions, Reducer, ActionConst, Overlay, Tabs, Modal, Drawer, Stack, Lightbox } from 'react-native-router-flux';
 export class LoginScreen extends Component{
 
     static navigationOptions={
         title: 'Welcome',
+    };
+    loginbtn(){
+        Actions.signup();
+    }
+    register(){
+        Actions.register();
+    };
+    resetpassword(){
+        Actions.resetPassword();
     };
     render(){
         return(
@@ -28,15 +37,15 @@ export class LoginScreen extends Component{
                     <TextInput placeholder="Senha" secureTextEntry={true} placeholderTextColor="#BDBDBD"/>
                 </View>
                 <View style = {styles.textbtnrow}>
-                    <TouchableOpacity style = {styles.touchmain}>
+                    <TouchableOpacity style = {styles.touchmain} onPress = {this.register}>
                         <Text style = {styles.texttouch}>Registre-se</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style = {styles.touchmain}>
+                    <TouchableOpacity style = {styles.touchmain} onPress = {this.resetpassword}>
                         <Text style = {styles.texttouch}>Esqueceu sua senha?</Text>
                     </TouchableOpacity>
                 </View>
                 <View>
-                    <TouchableOpacity style = {styles.loginbtn}>
+                    <TouchableOpacity style = {styles.loginbtn} onPress = {this.loginbtn}>
                         <Text style = {styles.loginbtntext}>LOGIN</Text>
                         {/*<Image style = {styles.loginbtnimg} source = {require('../assets/images/login.png')}/>*/}
                     </TouchableOpacity>
