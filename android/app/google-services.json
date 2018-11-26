@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "42340102824",
+    "firebase_url": "https://uparked1.firebaseio.com",
+    "project_id": "uparked1",
+    "storage_bucket": "uparked1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:42340102824:android:8c9345ee0e28ac66",
+        "android_client_info": {
+          "package_name": "com.uparked"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "42340102824-pb542mubkidso95cneisabkckbhopq7m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFnrQOv9x8D6IHSuHfcCudTl-0SVoXBG0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

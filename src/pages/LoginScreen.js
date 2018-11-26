@@ -1,15 +1,26 @@
 import React ,{Component} from 'react';
 import {Dimensions,TouchableOpacity ,StyleSheet,Image, TextInput,Text, View,Button} from 'react-native';
-
-
 import { Scene, Router, Actions, Reducer, ActionConst, Overlay, Tabs, Modal, Drawer, Stack, Lightbox } from 'react-native-router-flux';
+// import FBLoginButton from "./FBLoginButton";
+import { handleFbLogin } from '../lib/auth';
+
+const FBSDK = require('react-native-fbsdk');
+
+const {
+    LoginButton,
+    AccessToken,
+    LoginManager
+} = FBSDK;
+
+
+
 export class LoginScreen extends Component{
 
-    static navigationOptions={
-        title: 'Welcome',
-    };
+    // static navigationOptions={
+    //     title: 'Welcome',
+    // };
     loginbtn(){
-        Actions.signup();
+        Actions.phoneVerify();
     }
     register(){
         Actions.register();
@@ -57,11 +68,14 @@ export class LoginScreen extends Component{
                 </View>
                 <View style = {styles.sociallogin}>
                     <View style = {styles.midsocialview}>
-                        <TouchableOpacity style = {styles.socialbtnlogin}><Image style = {styles.socialbtnimg} source = {require('../assets/icons/social_fb.png')}/></TouchableOpacity>
+                        <TouchableOpacity style = {styles.socialbtnlogin} onPress = {handleFbLogin}><Image style = {styles.socialbtnimg} source = {require('../assets/icons/social_fb.png')}/></TouchableOpacity>
                         <TouchableOpacity style = {styles.socialbtnlogin}><Image style = {styles.socialbtnimg} source = {require('../assets/icons/social_g.png')}/></TouchableOpacity>
                     </View>
 
                 </View>
+
+
+
 
             </View>
         )
